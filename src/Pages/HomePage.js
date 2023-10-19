@@ -22,7 +22,7 @@ export default function HomePage() {
 
 
 const Conteiner = styled.div `
-background-color: red;
+/* background-color: red; */
 height: 950px;
 width: 100%;
 display: flex;
@@ -31,18 +31,19 @@ align-items: center;
 `
 
 const Header = styled.div`
-background-color: blue;
+/* background-color: blue; */
 font-family: 'Righteous', cursive;
-font-size: 44px;
+font-size: 25px;
 font-weight: 400;
-color: #FFFFFF;
+color: #000;
 display: flex;
 justify-content: center;
 box-shadow: 0px 10px 10px #00000040;
+width: 100%;
 `
 
 const Body = styled.div`
-background-color: green;
+/* background-color: green; */
 display: flex;
 justify-content: center;
 margin-top: 50px;
@@ -59,4 +60,5 @@ justify-content: center;
 text-align: center;
 align-items: center;
 cursor: pointer;
+
 `
