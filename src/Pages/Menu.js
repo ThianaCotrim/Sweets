@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import Fundo from "../Fundo.png"
+import Logo from "../Logo.png"
+
 
 export default function Menu() {
 
@@ -9,9 +12,11 @@ export default function Menu() {
     }
 
  return (
+    
     <Conteiner>
+       
     <Header>
-    DOCES VOVÓ NANÁ
+    <img src={Logo} alt="Logo" />
     </Header>
     <ZapConteiner>
     <Zap onClick={whatsapp}>
@@ -47,7 +52,7 @@ export default function Menu() {
 }
 
 const Header = styled.div`
-/* background-color: blue; */
+background-color: #ffc8c8;
 font-family: 'Righteous', cursive;
 font-size: 25px;
 font-weight: 400;
@@ -56,12 +61,17 @@ display: flex;
 justify-content: center;
 box-shadow: 0px 10px 10px #00000040;
 width: 100%;
-margin-bottom: 30px;
+
+img {
+border-radius: 100px;
+width: 120px;
+height: 120px;
+} 
 `
 
 const Conteiner = styled.div `
-/* background-color: red; */
-height: 950px;
+background-image: url(${Fundo});
+height: 100%;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -72,15 +82,16 @@ align-items: center;
 const Box = styled.div`
 background-color: white;
 border-radius: 20px;
-width: 250px;
-height: 250px;
+width: 100px;
+height: 100px;
 display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
 flex-wrap: wrap;
-border: 4px solid #000;
+border: 4px solid #F5A9BC;
 margin-bottom: 15px;
+box-shadow: 0px 10px 10px #00000040;
 
 `
 
@@ -105,6 +116,7 @@ width: 100%;
 const Zap = styled.div`
 background-color: #a4c639;
 margin-bottom: 50px;
+margin-top: 50px;
 cursor: pointer;
 width: 160px;
 height: 40px;
