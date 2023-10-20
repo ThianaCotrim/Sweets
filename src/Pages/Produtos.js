@@ -5,6 +5,12 @@ import Logo from "../Logo.png"
 
 export default function Produtos() {
 
+    const msg = "Oii, gostaria de mais informações sobre os produtos do catálogo dos Doces Vovó Naná!"
+
+    function whatsapp(){
+        window.open(`https://wa.me/5521999280843?text=${msg}`,'_blank');
+    }
+
  return (
     
     <Conteiner>
@@ -14,7 +20,7 @@ export default function Produtos() {
     </Header>
     <ZapConteiner>
     <Zap>
-        Chama no Zap!
+    <ion-icon onClick={whatsapp} name="logo-whatsapp"></ion-icon>
     </Zap>
     </ZapConteiner>
     <BoxConteinerUm>
@@ -46,7 +52,7 @@ export default function Produtos() {
 }
 
 const Header = styled.div`
-background-color: #ffc8c8;
+background-image: url(${Fundo});
 font-family: 'Righteous', cursive;
 font-size: 25px;
 font-weight: 400;
@@ -64,7 +70,7 @@ height: 150px;
 `
 
 const Conteiner = styled.div `
-background-image: url(${Fundo});
+/* background-color: green; */
 height: 100%;
 width: 100%;
 display: flex;
@@ -111,9 +117,10 @@ const Zap = styled.div`
 background-color: #a4c639;
 margin-bottom: 50px;
 margin-top: 50px;
+margin-right: 20px;
 cursor: pointer;
-width: 160px;
-height: 40px;
+width: 40px;
+height: 100%;
 border-radius: 10px;
 display:flex;
 justify-content: center;
@@ -121,6 +128,10 @@ align-items: center;
 font-size: 20px;
 color: white;
 font-weight: bold;
+
+ion-icon{
+    font-size: 40px;
+}
 `
 
 const ZapConteiner = styled.div`

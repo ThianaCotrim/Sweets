@@ -1,4 +1,5 @@
 import Logo from "../Logo.png"
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Fundo from "../Fundo.png"
 import Idosas from "../idosas.jpg"
@@ -11,14 +12,19 @@ export default function Sobrenos() {
     <Header>
     <img src={Logo} alt="Logo" />
     </Header>
+    <Icone>
+    <Link to={`/`}>
+    <ion-icon name="arrow-back-circle-outline"></ion-icon>
+    </Link>
+    </Icone>
     <h1>Sobre nós! </h1>
     <Box>
     <img src={Idosas} alt="Foto" />
     <Body>
     <h2>Nossa inspiração vem do Noroeste Fluminense do Rio de Janeiro, específicamente da cidade de Miracema onde a saudosa Tia Maria fazia a melhor goiabada da região e, minha mãe,  saudosa Evangelina (Vovó Naná) irmã da Tia Maria, trouxe essa arte para Rio Bonito RJ onde, nos dias de hoje, dou continuidade à essa ( que é nosso carro chefe) e outras artes.
     <h2>"Cada tacho mexido sinto ali a presença delas me agradecendo pela continuidade e dedicação à sua e,  agora nossa arte."</h2>
-Fica aqui, enquanto sobrinho e filho, meu agradecimento, 
-respeito e eterna gratidão às irmãs Pereira de Miracema: Maria e Naná.</h2> 
+    Fica aqui, enquanto sobrinho e filho, meu agradecimento, 
+    respeito e eterna gratidão às irmãs Pereira de Miracema: Maria e Naná.</h2> 
 <h3>Ass: Hélio Ricardo</h3>
     </Body>
     </Box>
@@ -43,8 +49,20 @@ h1{
 }
 `
 
+const Icone = styled.div`
+width: 100%;
+text-decoration: none;
+
+ion-icon {
+    font-size: 30px;
+    margin-left: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+}
+`
+
 const Header = styled.div`
-/* background-color: #ffc8c8; */
 background-image: url(${Fundo});
 font-family: 'Righteous', cursive;
 font-size: 25px;
@@ -75,6 +93,10 @@ width: 450px;
 height: 100%;
 box-shadow: 0px 10px 10px #00000040;
 
+@media (max-width: 768px) {
+width: 280px;
+}
+
 h2{
 line-height: 2;
 font-weight: 300;
@@ -86,6 +108,7 @@ h3{
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-size: 15px;
+    line-height: 2;
 }
 `
 
@@ -95,11 +118,20 @@ justify-content: center;
 align-items: center;
 width: 100%;
 
+@media (max-width: 768px) {
+flex-direction: column;
+}
+
 img{
     width: 500px;
     height: 400px;
     border-radius: 40px;
     margin-right: 20px;
     box-shadow: 0px 10px 10px #00000040;
+
+@media (max-width: 768px) {
+width: 280px;
+height: 230px;
+}
 }
 `

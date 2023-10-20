@@ -63,7 +63,6 @@ align-items: center;
 `
 
 const Header = styled.div`
-/* background-color: #ffc8c8; */
 background-image: url(${Fundo});
 font-family: 'Righteous', cursive;
 font-size: 25px;
@@ -82,7 +81,6 @@ height: 150px;
 `
 
 const Body = styled.div`
-/* background-color: green; */
 display: flex;
 justify-content: center;
 margin-top: 20px;
@@ -108,7 +106,7 @@ line-height: 2;
 `
 
 const Button = styled.div`
-background-color: pink;
+background-color: #FFF3F3;
 width: 300px;
 height: 50px;
 border-radius: 10px;
@@ -135,5 +133,4 @@ ion-icon{
   text-decoration: none;
   color: black;
 }
-
 `
