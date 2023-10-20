@@ -1,5 +1,6 @@
 import Logo from "../Logo.png"
 import styled from 'styled-components'
+import Fundo from "../Fundo.png"
 
 export default function QuemSomos() {
 
@@ -30,7 +31,8 @@ align-items: center;
 `
 
 const Header = styled.div`
-background-color: #ffc8c8;
+/* background-color: #ffc8c8; */
+background-image: url(${Fundo});
 font-family: 'Righteous', cursive;
 font-size: 25px;
 font-weight: 400;
@@ -54,6 +56,7 @@ justify-content: center;
 margin-top: 20px;
 margin-bottom: 40px;
 flex-direction: column;
+padding: 30px;
 
 h2{
 line-height: 2.5;

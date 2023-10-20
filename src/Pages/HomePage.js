@@ -109,7 +109,7 @@ line-height: 2;
 
 const Button = styled.div`
 background-color: pink;
-width: 450px;
+width: 300px;
 height: 50px;
 border-radius: 10px;
 display: flex;
