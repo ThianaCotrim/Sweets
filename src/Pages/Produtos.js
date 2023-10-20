@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import Fundo from "../Fundo.png"
 import Logo from "../Logo.png"
+import { Link } from 'react-router-dom'
+import Goiabada from "../Goiabada.jpg"
+import Defumados from "../Defumados.jpg"
+import Queijos from "../Queijos.jpeg"
 
 
 export default function Produtos() {
@@ -14,10 +18,15 @@ export default function Produtos() {
  return (
     
     <Conteiner>
-       
     <Header>
     <img src={Logo} alt="Logo" />
     </Header>
+    <Icone>
+    <Link to={`/`}>
+    <ion-icon name="arrow-back-circle-outline"></ion-icon>
+    </Link>
+    </Icone>
+    <h1>Produtos </h1>
     <ZapConteiner>
     <Zap>
     <ion-icon onClick={whatsapp} name="logo-whatsapp"></ion-icon>
@@ -25,12 +34,15 @@ export default function Produtos() {
     </ZapConteiner>
     <BoxConteinerUm>
     <Box>
-        Goiabada
+    <img src={Goiabada} alt="goiabada" />
+        Doces
     </Box>
     <Box>
+    <img src={Defumados} alt="defumados" />
         Defumados
     </Box>
     <Box>
+    <img src={Queijos} alt="queijos" />
         Queijos
     </Box>
     </BoxConteinerUm>
@@ -39,10 +51,21 @@ export default function Produtos() {
         Geléias
     </Box>
     <Box>
-        Biscoitos Amanteigados
+        Biscoitos
     </Box>
     <Box>
-        Doces de Leite
+        xxx
+    </Box>
+    </BoxConteinerDois>
+    <BoxConteinerDois>
+    <Box>
+        Molhos
+    </Box>
+    <Box>
+        Pastas
+    </Box>
+    <Box>
+        Conservas
     </Box>
     </BoxConteinerDois>
     
@@ -69,18 +92,39 @@ height: 150px;
 } 
 `
 
+const Icone = styled.div`
+width: 100%;
+text-decoration: none;
+margin-top: 20px;
+
+ion-icon {
+    font-size: 30px;
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: none;
+    color: black;
+}
+`
+
 const Conteiner = styled.div `
-/* background-color: green; */
 height: 100%;
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
 
+
+h1{
+display: flex;
+justify-content: center;
+font-family: 'Dancing Script', cursive;
+font-weight: 400;
+margin-top: 5px;
+}
 `
 
 const Box = styled.div`
-background-color: white;
+
 border-radius: 20px;
 width: 100px;
 height: 100px;
@@ -90,13 +134,22 @@ align-items: center;
 cursor: pointer;
 flex-wrap: wrap;
 border: 4px solid #F5A9BC;
-margin-bottom: 15px;
+margin-bottom: 40px;
 box-shadow: 0px 10px 10px #00000040;
+position: relative;    
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 17px;
+    opacity: 0.5;
+    position: fixed;
+    position: absolute;
+}
 
 `
 
 const BoxConteinerUm = styled.div`
-/* background-color: pink; */
 display: flex;
 justify-content: space-around;
 width: 100%;
@@ -105,7 +158,6 @@ flex-wrap: wrap;
 `
 
 const BoxConteinerDois = styled.div`
-/* background-color: pink; */
 display: flex;
 justify-content: space-around;
 width: 1800px;
@@ -114,9 +166,8 @@ width: 100%;
 `
 
 const Zap = styled.div`
-background-color: #a4c639;
-margin-bottom: 50px;
-margin-top: 50px;
+margin-bottom: 60px;
+margin-top: 10px;
 margin-right: 20px;
 cursor: pointer;
 width: 40px;
@@ -130,7 +181,10 @@ color: white;
 font-weight: bold;
 
 ion-icon{
+    background-color: white;
     font-size: 40px;
+    color: #a4c639;
+    position: fixed;
 }
 `
 

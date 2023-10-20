@@ -46,17 +46,19 @@ h1{
     justify-content: center;
     font-family: 'Dancing Script', cursive;
     font-weight: 400;
+    margin-top: 0px;
 }
 `
 
 const Icone = styled.div`
 width: 100%;
 text-decoration: none;
+margin-bottom: 0px;
 
 ion-icon {
     font-size: 30px;
     margin-left: 20px;
-    opacity: 0.6;
+    opacity: 0.5;
     text-decoration: none;
     color: black;
 }
@@ -95,6 +97,9 @@ box-shadow: 0px 10px 10px #00000040;
 
 @media (max-width: 768px) {
 width: 280px;
+display: flex;
+text-align: center;
+
 }
 
 h2{
