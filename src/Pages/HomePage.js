@@ -26,10 +26,10 @@ export default function HomePage() {
     <h1>Sejam bem vindos! </h1>
 
     </Body>
-    <Link to={`/quemsomos`} style={{ textDecoration: 'none' }}>
+    <Link to={`/sobrenos`} style={{ textDecoration: 'none' }}>
     <Button>
     <ion-icon name="person-circle-outline"></ion-icon>
-      <p>Quem somos</p>
+      <p>Sobre nós</p>
     </Button>
     </Link>
     <Button onClick={whatsapp}>
@@ -40,7 +40,7 @@ export default function HomePage() {
     <ion-icon name="logo-instagram"></ion-icon>
       <p>Instagram</p>
     </Button>
-    <Link to={`/menu`} style={{ textDecoration: 'none' }}>
+    <Link to={`/produtos`} style={{ textDecoration: 'none' }}>
     <Button>
     <ion-icon name="list-outline"></ion-icon>
       <p>Produtos</p>

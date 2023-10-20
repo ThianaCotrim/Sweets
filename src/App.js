@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Menu from './Pages/Menu'
 import HomePage from './Pages/HomePage'
-import QuemSomos from "./Pages/QuemSomos"
+import Produtos from "./Pages/Produtos"
+import Sobrenos from "./Pages/Sobrenos"
 
 
 export default function App() {
@@ -11,8 +11,8 @@ export default function App() {
   <Routes>
   
   <Route path="/" element={<HomePage/>} />
-  <Route path="/menu" element={<Menu />} />
-  <Route path="/quemsomos" element={<QuemSomos />} />
+  <Route path="/produtos" element={<Produtos />} />
+  <Route path="/sobrenos" element={<Sobrenos />} />
   
   </Routes>
   </BrowserRouter>

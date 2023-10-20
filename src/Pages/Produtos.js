@@ -3,7 +3,7 @@ import Fundo from "../Fundo.png"
 import Logo from "../Logo.png"
 
 
-export default function Menu() {
+export default function Produtos() {
 
  return (
     
