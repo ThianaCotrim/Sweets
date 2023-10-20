@@ -5,12 +5,6 @@ import Logo from "../Logo.png"
 
 export default function Menu() {
 
-    const msg = "Oii, gostaria de mais informações sobre os produtos do catálogo dos Doces Vovó Naná!"
-
-    function whatsapp(){
-        window.open(`https://wa.me/5521999280843?text=${msg}`,'_blank');
-    }
-
  return (
     
     <Conteiner>
@@ -19,7 +13,7 @@ export default function Menu() {
     <img src={Logo} alt="Logo" />
     </Header>
     <ZapConteiner>
-    <Zap onClick={whatsapp}>
+    <Zap>
         Chama no Zap!
     </Zap>
     </ZapConteiner>
@@ -64,8 +58,8 @@ width: 100%;
 
 img {
 border-radius: 100px;
-width: 120px;
-height: 120px;
+width: 150px;
+height: 150px;
 } 
 `
 

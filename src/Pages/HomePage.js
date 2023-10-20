@@ -1,9 +1,22 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from "../Logo.png"
+import Fundo from "../Fundo.png"
 
 export default function HomePage() {
+
+    const msg = "Oii, gostaria de mais informações sobre os produtos do catálogo dos Doces Vovó Naná!"
+
+    function whatsapp(){
+        window.open(`https://wa.me/5521999280843?text=${msg}`,'_blank');
+    }
+
+    function instagram(){
+      window.open('https://instagram.com/docesvovonana2020?igshid=YTQwZjQ0NmI0OA==', '_blank')
+    }
+
     return (
+
 <Conteiner>
   
     <Header>
@@ -11,16 +24,29 @@ export default function HomePage() {
     </Header>
     <Body>
     <h1>Sejam bem vindos! </h1>
-  <h2>Nossa inspiração vem do Noroeste Fluminense do Rio de Janeiro , específicamente da cidade de Miracema onde a saudosa Tia Maria fazia a melhor goiabada da região e, minha mãe,  saudosa Evangelina (Vovó Naná) irmã da Tia Maria, trouxe essa arte para Rio Bonito RJ onde, nos dias de hoje, dou continuidade à essa ( que é nosso carro chefe) e outras artes.
-" Cada tacho mexido sinto ali a presença delas me agradecendo pela continuidade e dedicação à sua e,  agora nossa arte."
-Fica aqui, enquanto sobrinho e filho, meu agradecimento, 
-respeito e eterna gratidão às irmãs Pereira de Miracema: Maria e Naná.</h2>
+
     </Body>
-    <Link to={`/menu`}>
+    <Link to={`/quemsomos`} style={{ textDecoration: 'none' }}>
     <Button>
-      <p>Todos os produtos</p>
+    <ion-icon name="person-circle-outline"></ion-icon>
+      <p>Quem somos</p>
     </Button>
     </Link>
+    <Button onClick={whatsapp}>
+    <ion-icon name="logo-whatsapp"></ion-icon>
+      <p>Whatsapp</p>
+    </Button>
+    <Button onClick={instagram}>
+    <ion-icon name="logo-instagram"></ion-icon>
+      <p>Instagram</p>
+    </Button>
+    <Link to={`/menu`} style={{ textDecoration: 'none' }}>
+    <Button>
+    <ion-icon name="list-outline"></ion-icon>
+      <p>Produtos</p>
+    </Button>
+    </Link>
+    
     
   </Conteiner>
     )
@@ -37,7 +63,8 @@ align-items: center;
 `
 
 const Header = styled.div`
-background-color: #ffc8c8;
+/* background-color: #ffc8c8; */
+background-image: url(${Fundo});
 font-family: 'Righteous', cursive;
 font-size: 25px;
 font-weight: 400;
@@ -49,8 +76,8 @@ width: 100%;
 
 img {
 border-radius: 100px;
-width: 120px;
-height: 120px;
+width: 150px;
+height: 150px;
 } 
 `
 
@@ -59,7 +86,7 @@ const Body = styled.div`
 display: flex;
 justify-content: center;
 margin-top: 20px;
-margin-bottom: 150px;
+margin-bottom: 40px;
 flex-direction: column;
 
 h1{
@@ -70,7 +97,7 @@ font-weight: 400;
 }
 
 h2 {
-font-size: 8px;
+font-size: 11px;
 display: flex;
 justify-content: center;
 text-align: center;
@@ -82,7 +109,7 @@ line-height: 2;
 
 const Button = styled.div`
 background-color: pink;
-width: 200px;
+width: 450px;
 height: 50px;
 border-radius: 10px;
 display: flex;
@@ -91,8 +118,21 @@ text-align: center;
 align-items: center;
 cursor: pointer;
 box-shadow: 0px 10px 10px #00000040;
+margin-bottom: 30px;
+
+a {
+text-decoration: none;
+}
 
 p{
+  color: black;
+}
+
+ion-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  text-decoration: none;
   color: black;
 }
 
