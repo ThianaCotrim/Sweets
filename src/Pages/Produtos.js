@@ -175,7 +175,6 @@ display: flex;
 justify-content: space-around;
 width: 100%;
 flex-wrap: wrap;
-
 `
 
 const BoxConteinerDois = styled.div`

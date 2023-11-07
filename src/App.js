@@ -13,8 +13,6 @@ import Pastas from "./Pages/Pastas"
 import Conservas from "./Pages/Conservas"
 import Bolos from "./Pages/Bolos"
 
-
-
 export default function App() {
  return (
   <BrowserRouter>
@@ -32,9 +30,6 @@ export default function App() {
   <Route path="/pastas" element={<Pastas />} />
   <Route path="/conservas" element={<Conservas />} />
   <Route path="/bolos" element={<Bolos />} />
-
-
-
   
   </Routes>
   </BrowserRouter>
