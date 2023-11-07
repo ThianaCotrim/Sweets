@@ -2,9 +2,15 @@ import styled from "styled-components"
 import Fundo from "../Fundo.png"
 import Logo from "../Logo.png"
 import { Link } from 'react-router-dom'
-import Goiabada from "../Goiabada.jpg"
-import Defumados from "../Defumados.jpg"
+import Defumados from "../Defumados.jpeg"
 import Queijos from "../Queijos.jpeg"
+import Doces from "../Doces.jpeg"
+import Geleias from "../Geleias.jpeg"
+import Biscoitos from "../Biscoitos.jpeg"
+import Molhos from "../Molhos.jpeg"
+import Pastas from "../Pastas.jpeg"
+import Conservas from "../Conservas.jpeg"
+import Bolos from "../Bolos.jpeg"
 
 
 export default function Produtos() {
@@ -33,40 +39,55 @@ export default function Produtos() {
     </Zap>
     </ZapConteiner>
     <BoxConteinerUm>
+    <Link to={`/doces`}>
     <Box>
-    <img src={Goiabada} alt="goiabada" />
-        Doces
+    <img src={Doces} alt="doces" />
     </Box>
+    </Link>
+    <Link to={`/defumados`}>
     <Box>
     <img src={Defumados} alt="defumados" />
-        Defumados
     </Box>
+    </Link>
+    <Link to={`/queijos`}>
     <Box>
     <img src={Queijos} alt="queijos" />
-        Queijos
     </Box>
+    </Link>
     </BoxConteinerUm>
     <BoxConteinerDois>
+    <Link to={`/geleias`}>
     <Box>
-        Geléias
+    <img src={Geleias} alt="geleias" />
     </Box>
+    </Link>
+    <Link to={`/biscoitos`}>
     <Box>
-        Biscoitos
+    <img src={Biscoitos} alt="biscoito" />
     </Box>
+    </Link>
+    <Link to={`/molhos`}>
     <Box>
-        xxx
+    <img src={Molhos} alt="molhos" />
     </Box>
+    </Link>
     </BoxConteinerDois>
     <BoxConteinerDois>
+    <Link to={`/pastas`}>
     <Box>
-        Molhos
+    <img src={Pastas} alt="pastas" />
     </Box>
+    </Link>
+    <Link to={`/conservas`}>
     <Box>
-        Pastas
+    <img src={Conservas} alt="conservas" />
     </Box>
+    </Link>
+    <Link to={`/bolos`}>
     <Box>
-        Conservas
+    <img src={Bolos} alt="bolos" />
     </Box>
+    </Link>
     </BoxConteinerDois>
     
     </Conteiner>
@@ -133,7 +154,7 @@ justify-content: center;
 align-items: center;
 cursor: pointer;
 flex-wrap: wrap;
-border: 4px solid #F5A9BC;
+border: 2px solid #696969;
 margin-bottom: 40px;
 box-shadow: 0px 10px 10px #00000040;
 position: relative;    
@@ -142,7 +163,7 @@ img {
     width: 100px;
     height: 100px;
     border-radius: 17px;
-    opacity: 0.5;
+    opacity: 0.8;
     position: fixed;
     position: absolute;
 }
