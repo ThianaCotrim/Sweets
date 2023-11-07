@@ -31,6 +31,9 @@ export default function Biscoitos() {
         setZoomed3(!zoomed3);
       };
 
+      const toggleZoom = (zoomSetter) => {
+        zoomSetter((prev) => !prev);
+      };
     return (    
         
         <Conteiner>
@@ -49,29 +52,77 @@ export default function Biscoitos() {
         </Zap>
         </ZapConteiner>
 
-    <BoxConteinerUm>
-    <Box onClick={zoom}>
-    <img  src={Biscoito1} alt="biscoito" style={{ transform: zoomed ? 'scale(4)' : 'scale(1)' }} />
-    <h2>Amanteigados</h2>
-    <h3>Goiaba: R$ 6,00</h3>
-    <h3>Leite Condensado: R$ 8,00</h3>
-    </Box>
+        <BoxConteinerUm>
+      <Box onClick={() => toggleZoom(setZoomed)}>
+        <img
+          src={Biscoito1}
+          alt="biscoito"
+          style={{
+            transform: zoomed ? 'scale(4) translate(100%, -10%)' : 'scale(1) translate(0, 0)',
+            transformOrigin: 'center center',
+          }}
+        />
+        {zoomed && (
+          <ZoomedImage
+            src={Biscoito1}
+            alt="biscoito"
+            style={{
+              transform: 'scale(4) translate(100%, -10%)',
+              transformOrigin: 'center center',
+            }}
+          />
+        )}
+        <h2>Amanteigados</h2>
+        <h3>Goiaba: R$ 6,00</h3>
+        <h3>Leite Condensado: R$ 8,00</h3>
+      </Box>
 
-    <Box onClick={zoom2}>
-    <img  src={Biscoito2} alt="biscoito" style={{ transform: zoomed2 ? 'scale(4)' : 'scale(1)' }} />
-    <h2>Rosquinhas</h2>
-    {/* <Valores> */}
-    <h3>Cebola: R$ 6,00</h3>
-    <h3>Queijo: R$ 8,00</h3>
-    {/* </Valores> */}
-    </Box>
+      <Box onClick={() => toggleZoom(setZoomed2)}>
+        <img
+          src={Biscoito2}
+          alt="biscoito"
+          style={{
+            transform: zoomed2 ? 'scale(4) translate(1%, -1%)' : 'scale(1) translate(0, 0)',
+            transformOrigin: 'center center',
+          }}
+        />
+        {zoomed2 && (
+          <ZoomedImage
+            src={Biscoito2}
+            alt="biscoito"
+            style={{
+              transform: 'scale(4) translate(-50%, -50%)',
+              transformOrigin: 'center center',
+            }}
+          />
+        )}
+        <h2>Rosquinhas</h2>
+        <h3>Cebola: R$ 6,00</h3>
+        <h3>Queijo: R$ 8,00</h3>
+      </Box>
 
-    <Box onClick={zoom3}>
-    <img  src={Biscoito3} alt="biscoito" style={{ transform: zoomed3 ? 'scale(4)' : 'scale(1)' }} />
-    <h2>Suspiros</h2>
-    <h3>R$ 6,00</h3>
-    </Box>
-
+      <Box onClick={() => toggleZoom(setZoomed3)}>
+        <img
+          src={Biscoito3}
+          alt="biscoito"
+          style={{
+            transform: zoomed3 ? 'scale(4) translate(-100%, -1%)' : 'scale(1) translate(0, 0)',
+            transformOrigin: 'center center',
+          }}
+        />
+        {zoomed3 && (
+          <ZoomedImage
+            src={Biscoito3}
+            alt="biscoito"
+            style={{
+              transform: 'scale(4) translate(-50%, -50%)',
+              transformOrigin: 'center center',
+            }}
+          />
+        )}
+        <h2>Suspiros</h2>
+        <h3>R$ 6,00</h3>
+      </Box>
     </BoxConteinerUm>
     </Conteiner>
      )
@@ -191,7 +242,6 @@ h3{
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background-color: yellow; */
     width: 150px;
 }
 `
@@ -203,9 +253,14 @@ width: 100%;
 flex-wrap: wrap;
 `
 
-// const Valores = styled.div`
-    
-//     border-radius: 20px;
-//     border: 2px solid #696969;
-//     width: 90px;
-// `
+const ZoomedImage = styled.img`
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform-origin: center center;
+  transition: transform 0.3s, transform-origin 0.3s;
+  z-index: 2;
+  display: ${({ zoomed }) => (zoomed ? 'block' : 'none')};
+  top: 0;
+  left: 0;
+`;
